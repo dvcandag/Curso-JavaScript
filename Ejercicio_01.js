@@ -1,6 +1,7 @@
-//Ejercicio 01: suma de dos números: Escribe una función 
-//que tome dos números como argumentos y devuelva su suma.
+//Ejercicio 01: Escribe una función que 
+//tome dos números como argumentos y devuelva su suma.
 
-function suma(a, b) {
-    return a + b;
-}
+console.log('hola mundo')
+let a = 20;
+let b = 14;
+console.log (a + b)
