@@ -1,3 +1,10 @@
+/* Ejercicio 10: declarar la función mostrarFechaHora() 
+utilizando métodos como getDate(), getMonth(), getFullYear(), 
+getHours(), getMinutes() y getSeconds() del objeto fecha. 
+Y desplegar estos datos en el documento HTML a través de 
+document.write(). 
+Finalmente, invocar la función mostrarFechaHora() para ejecutarla 
+y mostrar la fecha y hora actual en la página.*/
 
 function mostrarFechaHora() {
     let fecha
