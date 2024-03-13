@@ -1,5 +1,5 @@
 /*
-Ejercicio 56:
+Ejercicio 14:
 Desarrollar una clase llamada "Cliente", diseñada para representar a un cliente de un banco
 y permitir operaciones básicas de gestión de saldo. Los saldos deben mostrarse en moneda peruana. 
 La clase debe tener los siguientes atributos y métodos:
