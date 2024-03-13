@@ -8,4 +8,31 @@ crea una lista llamada "vector" que contendrá tres objetos de la clase Hipervin
 Asegúrate de seguir el estilo de codificación js, proporcionar comentarios 
 explicativos. Tu solución debe entregarse en un archivo .js */
 
+//SOLUCION
 
+   // Definición de la clase Hipervinculo
+   class Hipervinculo {
+    // Método constructor que inicializa los atributos direccion y titulo
+    constructor(direccion, titulo) {
+        this.direccion = direccion; // Asigna la dirección del hipervínculo
+        this.titulo = titulo; // Asigna el título del hipervínculo
+    }
+
+    // Método para retornar el hipervínculo en formato HTML válido
+    retornarHipervinculo() {
+        // Crea la cadena HTML con la dirección y el título del hipervínculo
+        let cadena = `<a href="${this.direccion}">${this.titulo}</a>`;
+        return cadena; // Retorna la cadena HTML del hipervínculo
+    }
+}
+
+// Creación de una lista llamada vector que contendrá tres objetos de la clase Hipervinculo
+let vector = [];
+vector.push(new Hipervinculo('https://www.google.com', 'google')); // Añade un hipervínculo a la lista
+vector.push(new Hipervinculo('https://www.msn.com', 'msn')); // Añade otro hipervínculo a la lista
+vector.push(new Hipervinculo('https://www.facebook.com', 'yahoo')); // Añade un tercer hipervínculo a la lista
+
+// Itera sobre los objetos en la lista vector e imprime el hipervínculo HTML de cada objeto
+for (let hipervinculo of vector) {
+    document.write(hipervinculo.retornarHipervinculo() + "<br>");
+}
