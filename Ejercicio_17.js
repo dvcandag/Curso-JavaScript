@@ -10,3 +10,15 @@ que se ejecute en el terminal mostrando la salida: [4, 5, 2, 5]
 
 
 
+//SOLUCION
+
+// Definición de la función (removerCeros) que elimina los ceros de un arreglo
+function removerCeros(arr) {
+// Utiliza el método filter para crear un nuevo arreglo que excluya los ceros
+return arr.filter(num => num !== 0);
+}
+
+// mostrando la salida:
+const arregloOriginal = [4, 0, 5, 0, 2, 0, 5]; // Arreglo original que contiene ceros
+const arregloSinCeros = removerCeros(arregloOriginal); // Llama a la función removerCeros
+console.log(arregloSinCeros); // Imprime el nuevo arreglo sin los ceros: [4, 5, 2, 5]
