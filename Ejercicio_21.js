@@ -10,7 +10,7 @@ en la terminal del entorno de desarrollo.
 
 */
 
-//SOLUSION
+//SOLUCION
 
 // Definición de la función "pares" que encuentra números pares en un arreglo 
 function pares(arr) {
