@@ -10,7 +10,7 @@ Tu solución debe entregarse en un archivo .js ejecutandose satisfactoriamente
 en el terminal de su entorno de desarrollo.
 */
 
-//SOLUSION
+//SOLUCION
 
 // Definición de la función 'Numeros_a_Palabras' que convierte números a palabras
 function Numeros_a_Palabras(numeros) {
