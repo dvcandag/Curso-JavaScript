@@ -11,7 +11,7 @@ en el terminal de su entorno de desarrollo.
 */
 
 
-//SOLUSION
+//SOLUCION
 // Definición de la función 'Palabras_a_Numeros' que traduce palabras a números
 function Palabras_a_Numeros(palabras) {
     // Objeto que mapea palabras a números del 0 al 9
