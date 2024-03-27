@@ -16,7 +16,7 @@ ejecutandose satisfactoriamente en el navegador de tu preferencia
 */
 
 
-//SOLUSION
+//SOLUCION
 
 // Definición de la función 'password' para generar una contraseña modificada
 function password(str) {
