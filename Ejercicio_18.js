@@ -13,7 +13,7 @@ que se ejecute en el terminal mostrando como salida 18
 
 */
 
-//SOLUSION
+//SOLUCION
 
 // Definición de la función sumarArreglo que suma los elementos dentro de un rango específico de un arreglo
 function sumarArreglo(arr, inicio, fin) {
