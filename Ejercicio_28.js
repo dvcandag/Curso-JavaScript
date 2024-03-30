@@ -6,3 +6,16 @@ Incluir comentarios explicativos en tu código para brindar claridad sobre su fu
 La solución debe entregarse en un archivo .js que se ejecute correctamente en el navegador de tu elección.
 */
 
+//SOLUCIÓN
+
+// Definición de la función sumar
+function sumar() {
+    // Obtener el valor del primer número ingresado por el usuario y convertirlo a un número entero
+    const num1 = parseInt(document.getElementById('num1').value);
+    // Obtener el valor del segundo número ingresado por el usuario y convertirlo a un número entero
+    const num2 = parseInt(document.getElementById('num2').value);
+    // Calcular la suma de los dos números
+    const suma = num1 + num2;
+    // Mostrar el resultado de la suma en el elemento con el id 'resultado'
+    document.getElementById('resultado').textContent = "La suma de los números es: " + suma;
+}
