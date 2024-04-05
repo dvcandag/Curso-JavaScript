@@ -11,3 +11,25 @@ Crea un programa que solicite al usuario ingresar una frase y luego muestre las 
 */
 
 
+// SOLUCIÓN
+
+// Solicitamos al usuario que ingrese una frase mediante la función prompt()
+let frase = prompt("Por favor, ingresa una frase:");
+
+// Convertimos la frase a minúsculas para facilitar la búsqueda de vocales
+frase = frase.toLowerCase();
+
+// Creamos una variable para almacenar las vocales encontradas
+let vocalesEncontradas = "";
+
+// Recorremos cada carácter de la frase
+for (let i = 0; i < frase.length; i++) {
+    // Verificamos si el carácter actual es una vocal
+    if (frase[i] === 'a' || frase[i] === 'e' || frase[i] === 'i' || frase[i] === 'o' || frase[i] === 'u') {
+        // Si es una vocal, la añadimos a la variable vocalesEncontradas
+        vocalesEncontradas += frase[i] + " ";
+    }
+}
+
+// Mostramos las vocales encontradas al usuario
+alert("Las vocales presentes en la frase son: " + vocalesEncontradas);
