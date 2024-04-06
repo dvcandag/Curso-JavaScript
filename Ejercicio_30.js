@@ -1,5 +1,5 @@
 /*
-Ejercicio 29: divisores de un número
+Ejercicio 30: divisores de un número
 
 Crear un programa que muestre en la pantalla los divisores de un número específico.
 
