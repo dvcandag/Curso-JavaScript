@@ -11,8 +11,28 @@ consumo de combustible por kilómetro.
 
 */
 
+//SOLUCIÓN
 
+// Evento para asegurarse de que el script se ejecute después de que la página haya cargado completamente
+document.addEventListener("DOMContentLoaded", function() {
+    // Función para calcular el consumo de combustible por kilómetro
+    function calcularConsumo() {
+        // Obtener los valores de los campos de entrada
+        var kilometrosRecorridos = parseFloat(document.getElementById("kilometros").value);
+        var litrosConsumidos = parseFloat(document.getElementById("litros").value);
 
+        // Calcular el consumo por kilómetro
+        var consumoPorKilometro = litrosConsumidos / kilometrosRecorridos;
 
+        // Mostrar el resultado en la página
+        document.getElementById("resultado").innerHTML = "El consumo de combustible por kilómetro es: " + consumoPorKilometro.toFixed(2) + " litros.";
+    }
 
-
+    // Evento submit del formulario
+    document.getElementById("formulario").addEventListener("submit", function(event) {
+        // Prevenir el envío del formulario
+        event.preventDefault();
+        // Llamar a la función para calcular el consumo
+        calcularConsumo();
+    });
+});
