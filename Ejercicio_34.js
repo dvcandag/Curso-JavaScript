@@ -24,3 +24,24 @@ Instrucciones:
 
 */
 
+// SOLUCIÓN
+
+// Función para capitalizar la primera letra de cada palabra en una cadena
+function capitalizarPalabras(cadena) {
+    return cadena.replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  // Función para mostrar el mensaje de bienvenida personalizado
+  function mostrarBienvenida() {
+    // Obtener el nombre ingresado por el usuario y capitalizar la primera letra de cada palabra
+    const nombreCompleto = capitalizarPalabras(document.getElementById("nombre").value);
+    
+    // Obtener el país ingresado por el usuario y convertirlo a mayúsculas con la primera letra en mayúscula
+    const pais = document.getElementById("pais").value.charAt(0).toUpperCase() + document.getElementById("pais").value.slice(1).toLowerCase();
+
+    // Construir el mensaje de bienvenida personalizado
+    const mensaje = `¡Bienvenido, ${nombreCompleto}! Nos alegra tenerte desde ${pais}.`;
+
+    // Mostrar el mensaje en el documento HTML
+    document.getElementById("mensajeBienvenida").textContent = mensaje;
+  }
