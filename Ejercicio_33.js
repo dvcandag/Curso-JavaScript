@@ -17,3 +17,22 @@ Instrucciones:
 
 */
 
+//SOLUCIÓN
+
+// Definir la constante para el valor de pi
+const PI = Math.PI;
+
+// Función para calcular el área y el perímetro del círculo
+function calcular() {
+  // Obtener el valor del radio del input
+  const radio = parseFloat(document.getElementById("radio").value);
+
+  // Calcular el área del círculo usando la fórmula A = π * r^2
+  const area = PI * Math.pow(radio, 2);
+
+  // Calcular el perímetro del círculo usando la fórmula P = 2 * π * r
+  const perimetro = 2 * PI * radio;
+
+  // Mostrar los resultados
+  document.getElementById("resultado").innerHTML = `El área del círculo es: ${area.toFixed(2)} <br> El perímetro del círculo es: ${perimetro.toFixed(2)}`;
+}
