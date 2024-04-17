@@ -13,4 +13,3 @@ Requisitos:
 4.- Muestra un mensaje que indique si el estudiante ha aprobado el curso o no, basado en el valor del booleano.
 
 */
-
