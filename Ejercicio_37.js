@@ -13,3 +13,30 @@ Requisitos:
 4.- Muestra un mensaje que indique si el estudiante ha aprobado el curso o no, basado en el valor del booleano.
 
 */
+
+// SOLUCIÓN
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('calificacionesForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evitar que el formulario se envíe
+
+      // Obtener las calificaciones ingresadas por el usuario
+      const calificacion1 = parseFloat(document.getElementById('calificacion1').value);
+      const calificacion2 = parseFloat(document.getElementById('calificacion2').value);
+      const calificacion3 = parseFloat(document.getElementById('calificacion3').value);
+
+      // Calcular el promedio de las tres calificaciones
+      const promedio = (calificacion1 + calificacion2 + calificacion3) / 3;
+
+      // Utilizar un booleano para determinar si el estudiante ha aprobado el curso
+      const aprobado = promedio >= 13;
+
+      // Mostrar un mensaje que indique si el estudiante ha aprobado el curso o no
+      const resultadoDiv = document.getElementById('resultado');
+      if (aprobado) {
+        resultadoDiv.textContent = `El estudiante ha aprobado el curso con un promedio de ${promedio.toFixed(2)}.`;
+      } else {
+        resultadoDiv.textContent = `El estudiante no ha aprobado el curso con un promedio de ${promedio.toFixed(2)}.`;
+      }
+    });
+  });
