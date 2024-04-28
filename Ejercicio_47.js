@@ -1,5 +1,5 @@
 /*
-Ejercicio 57: Estructuras de Control - Condicionales
+Ejercicio 47: Estructuras de Control - Condicionales
 
 Desarrolla un juego en el que la computadora "piense" en un número aleatorio entre 1 y 100, y el usuario 
 tenga que adivinarlo. Después de cada intento del usuario, la computadora debe indicar si el número a adivinar 
