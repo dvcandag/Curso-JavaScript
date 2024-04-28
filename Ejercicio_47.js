@@ -1,7 +1,7 @@
 /*
 Ejercicio 47: Estructuras de Control - Condicionales
 
-Desarrolla un juego en el que la computadora "piense" en un número aleatorio entre 1 y 100, y el usuario 
+Desarrolla un juego en el que la computadora "piense" en un número aleatorio entre 1 y 10, y el usuario 
 tenga que adivinarlo. Después de cada intento del usuario, la computadora debe indicar si el número a adivinar 
 es mayor o menor que el número ingresado por el usuario, hasta que el usuario adivine el número correcto.
 
