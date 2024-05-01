@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejecución</title>
-    <script src="Ejercicio_45.js"></script>
+    <script src="Ejercicio_43.js"></script>
 </head>
 <body>
     <h1>Ejecución de la resolución de ejercicios</h1>
@@ -241,7 +241,18 @@
     -->
     
 
-
+    <h1>Calculadora de Descuento</h1>
+    <div class="form">
+        <label for="precioOriginal">Cantidad:</label>
+        <input type="text" id="precioOriginal" maxlength="4"> 
+        <label for="descuento">Descuento:</label>
+        <input type="text" id="descuento" maxlength="2"> <span>%</span>
+        <button onclick="calcularDescuento()">Calcular</button>
+    </div>
+    <div class="resultado" id="resultado">
+        <p>Resultado: <span id="precioFinal"></span></p>
+    </div>
+    <button onclick="borrarCampos()">Borrar</button>
 
     <!-- 
     HTML DEL Ejercicio_46.js
