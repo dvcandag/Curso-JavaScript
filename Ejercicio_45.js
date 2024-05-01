@@ -10,3 +10,24 @@ Requisitos:
 3.- Utilizar las etequietas html para mostrar resultados en la pantalla.
 
 */
+
+
+// SOLUCIÓN
+
+// Solicitamos al usuario que ingrese un número
+let numero = prompt("Ingrese un número:");
+
+// Convertimos el valor ingresado a un número
+numero = parseFloat(numero);
+
+// Verificamos si el número es positivo, negativo o cero
+if (numero > 0) {
+    // Si el número es mayor que cero, es positivo
+    document.write("El número ingresado es positivo.");
+} else if (numero < 0) {
+    // Si el número es menor que cero, es negativo
+    document.write("El número ingresado es negativo.");
+} else {
+    // Si el número es igual a cero, es cero
+    document.write("El número ingresado es cero.");
+}
