@@ -1,7 +1,7 @@
 /*
 Ejercicio 44: Estructuras de Control - Tipos de Operadores
 
-Escribe un programa que solicite al usuario que ingrese una contraseña. La contraseña debe cumplir con ciertos criterios, como 
+Escribe un programa que solicite al usuario cree una contraseña. La contraseña debe cumplir con ciertos criterios, como 
 tener al menos 8 caracteres de longitud, contener al menos una letra mayúscula, una letra minúscula, dos números y dos caracteres especiales. 
 El programa debe validar si la contraseña ingresada cumple con todos los criterios y mostrar un mensaje apropiado.
 
