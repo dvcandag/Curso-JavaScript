@@ -21,3 +21,47 @@ Requisitos:
 
 4.- La aplicación debe permitir al usuario realizar múltiples cálculos ingresando salarios anuales diferentes en cada ejecución.
 */
+
+// SOLUCIÓN
+
+// Definimos la función para calcular el impuesto sobre la renta
+function calcularImpuesto(salarioAnual) {
+    let impuesto;
+    // Calculamos el impuesto según la tabla proporcionada
+    if (salarioAnual <= 1025) {
+        impuesto = salarioAnual * 0.1; // 10% del salario para salarios <= 1025
+    } else if (salarioAnual <= 1500) {
+        impuesto = salarioAnual * 0.15; // 15% del salario para salarios entre 1025 y 1500
+    } else {
+        impuesto = salarioAnual * 0.2; // 20% del salario para salarios > 1500
+    }
+    return impuesto;
+}
+
+// Función para solicitar el salario anual al usuario y mostrar el impuesto calculado
+function calcularImpuestoUsuario() {
+    // Solicitamos al usuario que ingrese su salario anual
+    let salario = parseFloat(prompt("Por favor, ingresa tu salario anual en S/ "));
+    
+    // Validamos que el usuario haya ingresado un número válido
+    if (!isNaN(salario)) {
+        // Calculamos el impuesto llamando a la función calcularImpuesto()
+        let impuesto = calcularImpuesto(salario);
+        // Mostramos el salario anual y el impuesto calculado al usuario
+        alert("Salario anual: S/" + salario.toFixed(2) + "\nImpuesto calculado: S/ " + impuesto.toFixed(2));
+    } else {
+        // Si el usuario no ingresó un número válido, mostramos un mensaje de error
+        alert("Por favor, ingresa un salario válido.");
+    }
+}
+
+// Llamamos a la función para permitir al usuario realizar múltiples cálculos
+while (true) {
+    calcularImpuestoUsuario();
+    // Preguntamos al usuario si desea realizar otro cálculo
+    let realizarOtroCalculo = confirm("¿Deseas realizar otro cálculo?");
+    // Si el usuario elige no realizar otro cálculo, salimos del bucle
+    if (!realizarOtroCalculo) {
+        break;
+    }
+}
