@@ -10,3 +10,16 @@ Además, se debe escribir un bloque try...catch para probar la función buscarUs
 consola, incluyendo información adicional como la fecha en que ocurrió.
 
 */
+
+// SOLUCIÓN
+
+// Definición de un error personalizado para el caso de nombre inválido
+class NombreInvalidoError extends Error {
+    constructor(message) {
+      super(message);
+      this.name = this.constructor.name;
+      this.date = new Date();
+    }
+  }
+  
+  
