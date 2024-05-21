@@ -22,4 +22,13 @@ class NombreInvalidoError extends Error {
     }
   }
   
+ // Definición de un error personalizado para el caso de usuario administrador
+class UsuarioAdministradorError extends Error {
+    constructor(message) {
+      super(message);
+      this.name = this.constructor.name;
+      this.date = new Date();
+    }
+  }
+   
   
