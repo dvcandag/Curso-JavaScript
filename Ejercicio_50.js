@@ -15,61 +15,51 @@ consola, incluyendo información adicional como la fecha en que ocurrió.
 
 // Definición de un error personalizado para el caso de nombre inválido
 class NombreInvalidoError extends Error {
-    constructor(message) {
+  constructor(message) {
       super(message);
       this.name = this.constructor.name;
       this.date = new Date();
-    }
   }
+}
 
- // Definición de un error personalizado para el caso de usuario administrador
+// Definición de un error personalizado para el caso de usuario administrador
 class UsuarioAdministradorError extends Error {
-    constructor(message) {
+  constructor(message) {
       super(message);
       this.name = this.constructor.name;
       this.date = new Date();
-    }
   }
+}
 
 // Función para buscar un usuario en la base de datos
 function buscarUsuario(nombre) {
-    if (nombre === null || nombre === undefined) {
+  if (nombre === null || nombre === undefined) {
       throw new NombreInvalidoError("El nombre de usuario es inválido");
-    }
-  
-    if (nombre.toLowerCase() === "admin") {
-      throw new UsuarioAdministradorError("No se puede buscar al usuario administrador");
-    }
-  
-    // Simulación de búsqueda del usuario en la base de datos
-    const usuarioEncontrado = {
-      nombre: nombre,
-      email: nombre + "@example.com", // Simulación de email basado en el nombre
-      edad: 30 // Edad de ejemplo
-    };
-  
-    return usuarioEncontrado;
-  }
-  
-  // Bloque try...catch para probar la función buscarUsuario
-  try {
-    const usuario = buscarUsuario("JohnDoe");
-    console.log("Usuario encontrado:", usuario);
-  } catch (error) {
-    if (error instanceof NombreInvalidoError || error instanceof UsuarioAdministradorError) {
-      console.error("Error:", error.message);
-      console.error("Fecha del error:", error.date);
-    } else {
-      console.error("Ocurrió un error inesperado:", error.message);
-    }
   }
 
-// Simulación de búsqueda del usuario en la base de datos
+  if (nombre.toLowerCase() === "admin") {
+      throw new UsuarioAdministradorError("No se puede buscar al usuario administrador");
+  }
+
+  // Simulación de búsqueda del usuario en la base de datos
   const usuarioEncontrado = {
-  nombre: nombre,
-  email: nombre + "@example.com", // Simulación de email basado en el nombre
-  edad: 30 // Edad de ejemplo
+      nombre: nombre,
+      email: nombre + "@elunico.com", // Simulación de email basado en el nombre
+      edad: 20 // Edad de ejemplo
   };
 
   return usuarioEncontrado;
+}
+
+// Bloque try...catch para probar la función buscarUsuario
+try {
+  const usuario = buscarUsuario("Vito");
+  console.log("Usuario encontrado:", usuario);
+} catch (error) {
+  if (error instanceof NombreInvalidoError || error instanceof UsuarioAdministradorError) {
+      console.error("Error:", error.message);
+      console.error("Fecha del error:", error.date);
+  } else {
+      console.error("Ocurrió un error inesperado:", error.message);
   }
+}
