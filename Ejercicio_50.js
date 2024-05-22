@@ -63,4 +63,13 @@ function buscarUsuario(nombre) {
       console.error("Ocurrió un error inesperado:", error.message);
     }
   }
-  
+
+// Simulación de búsqueda del usuario en la base de datos
+  const usuarioEncontrado = {
+  nombre: nombre,
+  email: nombre + "@example.com", // Simulación de email basado en el nombre
+  edad: 30 // Edad de ejemplo
+  };
+
+  return usuarioEncontrado;
+  }
