@@ -5,3 +5,7 @@ Desarrolla un programa que utilice el método log() del objeto console para most
 un mensaje de bienvenida en la consola del navegador.
 
 */
+
+// SOLUCIÓN
+
+console.log("¡Bienvenido a mi programa!");
