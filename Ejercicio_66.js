@@ -49,8 +49,22 @@ function sumarDiasFecha(fecha, dias) {
     nuevaFecha.setDate(nuevaFecha.getDate() + dias);
     return nuevaFecha;
 }
+// 4.- Función Calcular Edad
+function calcularEdad(fechaNacimiento) {
+    const hoy = new Date();
+    const nacimiento = new Date(fechaNacimiento);
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
+    const mesHoy = hoy.getMonth();
+    const mesNacimiento = nacimiento.getMonth();
+
+    if (mesHoy < mesNacimiento || (mesHoy === mesNacimiento && hoy.getDate() < nacimiento.getDate())) {
+        edad--;
+    }
+    return edad;
+}
 
 // Se imprime los resultados
 console.log("Fecha Actual:", obtenerFechaActual());
 console.log("Diferencia de Días:", calcularDiferenciaDias(new Date('2024-06-01'), new Date('2024-06-10')));
 console.log("Sumar 5 días a la fecha:", sumarDiasFecha(new Date(), 5));
+console.log("Edad:", calcularEdad('1990-05-15'));
