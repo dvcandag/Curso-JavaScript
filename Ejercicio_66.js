@@ -80,3 +80,5 @@ console.log("Sumar 5 días a la fecha:", sumarDiasFecha(new Date(), 5));
 console.log("Edad:", calcularEdad('1990-05-15'));
 console.log("Día de la Semana:", obtenerDiaSemana(new Date()));
 console.log("¿Es año bisiesto?:", esAnioBisiesto(2024));
+
+// Se completo la solución del ejercicio 66
