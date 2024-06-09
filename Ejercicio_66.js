@@ -42,6 +42,15 @@ function calcularDiferenciaDias(fecha1, fecha2) {
     const diferenciaMs = Math.abs(fecha2 - fecha1);
     return Math.floor(diferenciaMs / unDia);
 }
+
+// 3.- Función Sumar Días a una Fecha
+function sumarDiasFecha(fecha, dias) {
+    const nuevaFecha = new Date(fecha);
+    nuevaFecha.setDate(nuevaFecha.getDate() + dias);
+    return nuevaFecha;
+}
+
 // Se imprime los resultados
 console.log("Fecha Actual:", obtenerFechaActual());
 console.log("Diferencia de Días:", calcularDiferenciaDias(new Date('2024-06-01'), new Date('2024-06-10')));
+console.log("Sumar 5 días a la fecha:", sumarDiasFecha(new Date(), 5));
