@@ -62,9 +62,15 @@ function calcularEdad(fechaNacimiento) {
     }
     return edad;
 }
+// 5.- Función Obtener día de la Semana
+function obtenerDiaSemana(fecha) {
+    const diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    return diasSemana[fecha.getDay()];
+}
 
 // Se imprime los resultados
 console.log("Fecha Actual:", obtenerFechaActual());
 console.log("Diferencia de Días:", calcularDiferenciaDias(new Date('2024-06-01'), new Date('2024-06-10')));
 console.log("Sumar 5 días a la fecha:", sumarDiasFecha(new Date(), 5));
 console.log("Edad:", calcularEdad('1990-05-15'));
+console.log("Día de la Semana:", obtenerDiaSemana(new Date()));
