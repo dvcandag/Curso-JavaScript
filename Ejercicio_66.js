@@ -26,4 +26,16 @@ Instrucciones:
     y devolver true si es bisiesto y false si no lo es.
 */
 
+// SOLUCIÓN
 
+// 1.- Función Obtener Fecha Actual
+function obtenerFechaActual() {
+    const fechaActual = new Date();
+    const dia = fechaActual.getDate();
+    const mes = fechaActual.getMonth() + 1; // Se suma 1 porque los meses van de 0 a 11
+    const año = fechaActual.getFullYear();
+    return `${dia}/${mes}/${año}`;
+}
+
+// Se imprime los resultados
+console.log("Fecha Actual:", obtenerFechaActual());
