@@ -36,6 +36,12 @@ function obtenerFechaActual() {
     const año = fechaActual.getFullYear();
     return `${dia}/${mes}/${año}`;
 }
-
+// 2.- Función Calcular Diferencia de Días
+function calcularDiferenciaDias(fecha1, fecha2) {
+    const unDia = 1000 * 60 * 60 * 24; // Milisegundos en un día
+    const diferenciaMs = Math.abs(fecha2 - fecha1);
+    return Math.floor(diferenciaMs / unDia);
+}
 // Se imprime los resultados
 console.log("Fecha Actual:", obtenerFechaActual());
+console.log("Diferencia de Días:", calcularDiferenciaDias(new Date('2024-06-01'), new Date('2024-06-10')));
