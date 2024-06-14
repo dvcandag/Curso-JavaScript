@@ -15,3 +15,31 @@ Instrucciones:
 
 */
 
+// SOLUCIÓN
+
+function generarNumeroAleatorioGaussiano(media, desviacionEstandar) {
+    // Verificamos si los parámetros son números válidos
+    if (typeof media !== 'number' || typeof desviacionEstandar !== 'number') {
+        throw new Error('Los parámetros media y desviacionEstandar deben ser números.');
+    }
+
+    // Generamos dos números aleatorios uniformemente distribuidos entre 0 y 1
+    var u1 = Math.random();
+    var u2 = Math.random();
+
+    // Aplicamos la transformación de Box-Muller para obtener números aleatorios con distribución normal
+    var z0 = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+    // var z1 = Math.sqrt(-2 * Math.log(u1)) * Math.sin(2 * Math.PI * u2);
+
+    // Escalamos y desplazamos los resultados para ajustarlos a la media y la desviación estándar especificadas
+    var numeroAleatorioGaussiano = z0 * desviacionEstandar + media;
+
+    // Devolvemos el número aleatorio gaussiano
+    return numeroAleatorioGaussiano;
+}
+
+// Ejemplo
+var media = 0; // Media
+var desviacionEstandar = 1; // Desviación estándar
+var numeroAleatorio = generarNumeroAleatorioGaussiano(media, desviacionEstandar);
+console.log("Número aleatorio gaussiano:", numeroAleatorio);
