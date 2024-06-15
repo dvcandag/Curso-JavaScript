@@ -6,3 +6,17 @@ es válida. La función debe devolver true si la cadena no es nula ni está inde
 longitud de 1 carácter. De lo contrario, debe devolver false."
 
 */
+
+// SOLUCIÓN
+
+function validarCadena(cadena) {
+    // Utilizamos el operador de cortocircuito (&&) para verificar las condiciones
+    return cadena && cadena.length > 0;
+}
+
+// Ejemplos:
+console.log(validarCadena("Hola")); // true
+console.log(validarCadena("")); // false
+console.log(validarCadena(null)); // false
+console.log(validarCadena(undefined)); // false
+console.log(validarCadena(" ")); // true (espacio cuenta como carácter)
